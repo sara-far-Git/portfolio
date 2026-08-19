@@ -3,7 +3,7 @@ export type Lang = 'he' | 'en'
 export interface Project {
   id: string
   name: string
-  year: string
+  period: Record<Lang, string>
   featured?: boolean
   tagline: Record<Lang, string>
   summary: Record<Lang, string>
@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     id: 'tripease',
     name: 'TripEase',
-    year: '2026',
+    period: { he: '2026 – היום', en: '2026 – Present' },
     featured: true,
     accent: '#5b8cff',
     tagline: {
@@ -31,8 +31,8 @@ export const projects: Project[] = [
       en: 'A mobile and web product for group trip planning: an agentic chat that builds a full itinerary from free-form conversation, real-fare flight and lodging pricing, budget feasibility checks, personalized recommendations, and one-tap day replanning. I work on the client layer (React Native / React) and the FastAPI services behind it.',
     },
     role: {
-      he: 'Full Stack / React Developer · 2026–היום',
-      en: 'Full Stack / React Developer · 2026–Present',
+      he: 'Full Stack / React Developer',
+      en: 'Full Stack / React Developer',
     },
     highlights: {
       he: [
@@ -65,7 +65,7 @@ export const projects: Project[] = [
   {
     id: 'hasdera',
     name: 'Hasdera Newsletter',
-    year: '2025',
+    period: { he: '2025', en: '2025' },
     featured: true,
     accent: '#e08a3c',
     tagline: {
@@ -77,8 +77,8 @@ export const projects: Project[] = [
       en: 'A full platform for a Hebrew community newspaper: a 3D flipbook reading experience rendered over PDFs, a self-service advertiser system for booking ad slots, uploading creatives and tracking performance, an admin panel, and an analytics layer with OpenAI-powered chatbots. I built every layer — frontend, the .NET API and the Python microservices.',
     },
     role: {
-      he: 'Freelance Full Stack Developer · 2025',
-      en: 'Freelance Full Stack Developer · 2025',
+      he: 'Freelance Full Stack Developer',
+      en: 'Freelance Full Stack Developer',
     },
     highlights: {
       he: [
@@ -108,7 +108,7 @@ export const projects: Project[] = [
   {
     id: 'recipeapp',
     name: 'RecipeApp',
-    year: '2026',
+    period: { he: '2026', en: '2026' },
     accent: '#3fb98a',
     tagline: {
       he: 'רשת חברתית למתכונים — ווב, מובייל ו-API במונוריפו אחד',
@@ -150,7 +150,7 @@ export const projects: Project[] = [
   {
     id: 'video-search-ai',
     name: 'Video Search AI',
-    year: '2026',
+    period: { he: '2026', en: '2026' },
     accent: '#a76bf0',
     tagline: {
       he: 'חיפוש סמנטי בתוך וידאו באמצעות זיהוי אובייקטים',

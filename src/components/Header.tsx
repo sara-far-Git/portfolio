@@ -13,21 +13,21 @@ export function Header() {
   }, [])
 
   return (
-    <header className="header" data-scrolled={scrolled}>
-      <div className="shell header__inner">
-        <a className="header__mark" href="#top">
-          <span className="header__dot" aria-hidden="true" />
+    <header className="hdr" data-scrolled={scrolled}>
+      <div className="shell hdr__in">
+        <a className="mark" href="#top">
           {t.hero.name}
+          <i>.</i>
         </a>
 
-        <nav className="header__nav">
+        <nav>
           <a href="#work">{t.nav.work}</a>
-          <a href="#experience">{t.nav.experience}</a>
+          <a href="#projects">{t.nav.projects}</a>
           <a href="#skills">{t.nav.skills}</a>
           <a href="#contact">{t.nav.contact}</a>
         </nav>
 
-        <button className="lang-toggle" onClick={toggle} aria-label="Switch language">
+        <button className="lang" onClick={toggle} aria-label="Switch language">
           {t.langToggle}
         </button>
       </div>

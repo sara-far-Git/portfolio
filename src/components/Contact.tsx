@@ -1,34 +1,39 @@
 import { contactInfo } from '../data/content'
+import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../i18n/useLanguage'
-import { Reveal } from './Reveal'
 
 export function Contact() {
   const { t } = useLanguage()
+  const { ref, visible } = useReveal<HTMLHeadingElement>()
 
   return (
-    <section className="section" id="contact">
+    <section className="ct" id="contact">
       <div className="shell">
-        <Reveal>
-          <div className="contact">
-            <h2 className="contact__title">{t.contact.title}</h2>
-            <p className="contact__body">{t.contact.body}</p>
+        <h2 className="rv" ref={ref} data-v={visible}>
+          {t.contact.title}
+        </h2>
+        <p className="rv" data-v={visible} style={{ transitionDelay: '80ms' }}>
+          {t.contact.body}
+        </p>
 
-            <div className="contact__links">
-              <a className="btn btn--primary" href={`mailto:${contactInfo.email}`}>
-                {contactInfo.email}
-              </a>
-              <a className="btn" href={`tel:${contactInfo.phoneHref}`} dir="ltr">
-                {contactInfo.phone}
-              </a>
-              <a className="btn" href={contactInfo.github} target="_blank" rel="noreferrer">
-                {t.contact.github} ↗
-              </a>
-              <a className="btn" href={contactInfo.cv} download>
-                {t.contact.cv}
-              </a>
-            </div>
-          </div>
-        </Reveal>
+        <div className="ct__l">
+          <a href={`mailto:${contactInfo.email}`}>
+            <small>{t.contact.email}</small>
+            <b dir="ltr">{contactInfo.email}</b>
+          </a>
+          <a href={`tel:${contactInfo.phoneHref}`}>
+            <small>{t.contact.phone}</small>
+            <b dir="ltr">{contactInfo.phone}</b>
+          </a>
+          <a href={contactInfo.github} target="_blank" rel="noreferrer">
+            <small>{t.contact.github}</small>
+            <b dir="ltr">sara-far-Git ↗</b>
+          </a>
+          <a href={contactInfo.cv} download>
+            <small>{t.contact.cv}</small>
+            <b dir="ltr">PDF ↓</b>
+          </a>
+        </div>
       </div>
     </section>
   )
