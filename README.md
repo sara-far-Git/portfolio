@@ -23,15 +23,9 @@ npm run preview    # תצוגה מקומית של ה-build
 
 ### אוטומטי — כל פוש ל-main
 
-`.github/workflows/deploy.yml` בונה ופורס ל-Cloudflare בכל פוש לענף `main`
-(וגם ידנית מלשונית Actions בגיטהאב).
-
-דורש שני secrets בריפו — `Settings → Secrets and variables → Actions`:
-
-| Secret | ערך |
-|--------|-----|
-| `CLOUDFLARE_API_TOKEN` | טוקן מ-Cloudflare עם הרשאת `Edit Cloudflare Workers` |
-| `CLOUDFLARE_ACCOUNT_ID` | מזהה החשבון, מהעמוד הראשי של Workers & Pages |
+הריפו מחובר ל-Cloudflare Workers Builds. כל פוש ל-`main` נבנה ונפרס אוטומטית
+(`npm run build` ואז `npx wrangler deploy`), וכל ענף אחר מקבל preview URL נפרד
+דרך `npx wrangler versions upload`. אין secrets לתחזק — הטוקן מנוהל בצד Cloudflare.
 
 ### ידני
 
