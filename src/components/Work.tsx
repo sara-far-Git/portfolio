@@ -1,29 +1,57 @@
+import type { Project } from '../data/projects'
 import { projects } from '../data/projects'
+import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../i18n/useLanguage'
 import { ProjectCard } from './ProjectCard'
-import { Reveal } from './Reveal'
+
+interface EntrySectionProps {
+  id: string
+  title: string
+  subtitle: string
+  items: Project[]
+}
+
+function EntrySection({ id, title, subtitle, items }: EntrySectionProps) {
+  const { ref, visible } = useReveal<HTMLDivElement>()
+
+  return (
+    <section className="sec shell" id={id}>
+      <div className="sec__head rv" ref={ref} data-v={visible}>
+        <h2>{title}</h2>
+        <p>{subtitle}</p>
+      </div>
+
+      <div>
+        {items.map((project, index) => (
+          <ProjectCard key={project.id} project={project} delay={index * 60} />
+        ))}
+      </div>
+    </section>
+  )
+}
 
 export function Work() {
   const { t } = useLanguage()
 
   return (
-    <section className="section" id="work">
-      <div className="shell">
-        <Reveal>
-          <div className="section__head">
-            <h2 className="section__title">{t.work.title}</h2>
-            <p className="section__sub">{t.work.subtitle}</p>
-          </div>
-        </Reveal>
+    <EntrySection
+      id="work"
+      title={t.work.title}
+      subtitle={t.work.subtitle}
+      items={projects.filter((project) => project.featured)}
+    />
+  )
+}
 
-        <div className="projects">
-          {projects.map((project, index) => (
-            <Reveal key={project.id} delay={index * 60} className={project.featured ? 'project-slot--featured' : ''}>
-              <ProjectCard project={project} />
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
+export function Projects() {
+  const { t } = useLanguage()
+
+  return (
+    <EntrySection
+      id="projects"
+      title={t.work.projTitle}
+      subtitle={t.work.projSubtitle}
+      items={projects.filter((project) => !project.featured)}
+    />
   )
 }

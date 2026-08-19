@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Design reference for the editorial layout, kept locally only
+Portfolio.html
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

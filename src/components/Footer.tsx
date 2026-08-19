@@ -4,12 +4,10 @@ export function Footer() {
   const { t } = useLanguage()
 
   return (
-    <footer className="footer">
-      <div className="shell footer__inner">
-        <span>
-          © {new Date().getFullYear()} {t.hero.name}
-        </span>
+    <footer className="ft">
+      <div className="shell ft__in">
         <span>{t.footer}</span>
+        <span dir="ltr">© {new Date().getFullYear()} Sara Farkash</span>
       </div>
     </footer>
   )

@@ -4,18 +4,20 @@ export const content = {
   he: {
     dir: 'rtl',
     nav: {
-      work: 'פרויקטים',
-      experience: 'ניסיון',
+      work: 'עבודה',
+      projects: 'פרויקטים',
       skills: 'כלים',
       contact: 'יצירת קשר',
     },
     hero: {
       kicker: 'Full Stack Developer',
       name: 'שרה פרקש',
-      headline: 'בונה מוצרים שלמים — מהמסך הראשון ועד ה-deploy.',
+      headline: 'בונה מוצרים שלמים — ',
+      headlineAccent: 'מהמסך הראשון ועד ה-deploy.',
       intro:
         'מפתחת Full Stack עם ניסיון בבניית אפליקציות ווב ומובייל מקצה לקצה ב-React, React Native, Node.js, FastAPI ו-PostgreSQL. מתמחה באינטגרציית API, פיצ׳רים מבוססי AI, אוטומציה ופריסה בענן — ולוקחת בעלות על משימה מהתכנון ועד ה-production.',
-      ctaWork: 'לפרויקטים',
+      ctaWork: 'לעבודות',
+      ctaMail: 'שליחת מייל',
       ctaCv: 'הורדת קורות חיים',
       stats: [
         { value: '4', label: 'מוצרים מלאים' },
@@ -24,13 +26,23 @@ export const content = {
       ],
     },
     work: {
-      title: 'פרויקטים',
-      subtitle: 'ארבעה מוצרים שבניתי — כל אחד מהם רץ מקצה לקצה: לקוח, שרת, מסד נתונים ופריסה.',
+      title: 'עבודה מקצועית',
+      subtitle: 'שני מוצרים שנבנו בעבודה ובפרילנס — לקוח, שרת, מסד נתונים ופריסה.',
+      projTitle: 'פרויקטים אישיים',
+      projSubtitle: 'מה שבניתי לבד, מהרעיון ועד הפריסה.',
       viewRepo: 'קוד ב-GitHub',
       viewDemo: 'לאתר החי',
       readMore: 'מה בניתי',
       readLess: 'סגירה',
       stackLabel: 'טכנולוגיות',
+    },
+    live: {
+      hint: 'תצוגה חיה',
+      load: 'טעינת האתר',
+      loading: 'טוען…',
+      open: 'פתיחה בלשונית',
+      blocked: 'האתר לא מאפשר הצגה בתוך מסגרת.',
+      blockedCta: 'פתיחה בלשונית חדשה',
     },
     experience: {
       title: 'ניסיון מקצועי',
@@ -86,17 +98,19 @@ export const content = {
     dir: 'ltr',
     nav: {
       work: 'Work',
-      experience: 'Experience',
+      projects: 'Projects',
       skills: 'Skills',
       contact: 'Contact',
     },
     hero: {
       kicker: 'Full Stack Developer',
       name: 'Sara Farkash',
-      headline: 'I build whole products — from the first screen to the deploy.',
+      headline: 'I build whole products — ',
+      headlineAccent: 'from the first screen to the deploy.',
       intro:
         'Full Stack Developer with experience building end-to-end web and mobile applications in React, React Native, Node.js, FastAPI and PostgreSQL. Focused on API integration, AI-powered features, automation and cloud deployment — and on owning a task from planning all the way to production.',
       ctaWork: 'See the work',
+      ctaMail: 'Email me',
       ctaCv: 'Download CV',
       stats: [
         { value: '4', label: 'shipped products' },
@@ -105,13 +119,23 @@ export const content = {
       ],
     },
     work: {
-      title: 'Selected work',
-      subtitle: 'Four products I built — each one running end to end: client, server, database and deployment.',
+      title: 'Professional work',
+      subtitle: 'Two products built on the job and freelance — client, server, database and deployment.',
+      projTitle: 'Personal projects',
+      projSubtitle: 'Built solo, from the idea to the deployment.',
       viewRepo: 'View on GitHub',
       viewDemo: 'Live site',
       readMore: 'What I built',
       readLess: 'Close',
       stackLabel: 'Stack',
+    },
+    live: {
+      hint: 'Live preview',
+      load: 'Load the site',
+      loading: 'Loading…',
+      open: 'Open in a tab',
+      blocked: 'This site does not allow embedding in a frame.',
+      blockedCta: 'Open in a new tab',
     },
     experience: {
       title: 'Experience',

@@ -1,50 +1,72 @@
+import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../i18n/useLanguage'
-import { Reveal } from './Reveal'
+
+interface XpItemProps {
+  period: string
+  role: string
+  org: string
+  body: string
+  tags?: readonly string[]
+  delay?: number
+}
+
+function XpItem({ period, role, org, body, tags, delay = 0 }: XpItemProps) {
+  const { ref, visible } = useReveal<HTMLDivElement>()
+
+  return (
+    <div className="xp__i rv" ref={ref} data-v={visible} style={{ transitionDelay: `${delay}ms` }}>
+      <div className="xp__p">
+        <bdi dir="ltr">{period}</bdi>
+      </div>
+      <div>
+        <h3 className="xp__r">{role}</h3>
+        <div className="xp__o">{org}</div>
+        <p className="xp__b">{body}</p>
+        {tags && (
+          <div className="tags">
+            {tags.map((tag) => (
+              <span className="tag" key={tag}>
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
 
 export function Experience() {
   const { t } = useLanguage()
   const { education } = t.experience
 
   return (
-    <section className="section" id="experience">
-      <div className="shell">
-        <Reveal>
-          <div className="section__head">
-            <h2 className="section__title">{t.experience.title}</h2>
-          </div>
-        </Reveal>
+    <section className="sec shell" id="experience">
+      <h3 className="sec__h3">{t.experience.title}</h3>
 
-        <div className="timeline">
-          {t.experience.items.map((item, index) => (
-            <Reveal key={item.org} delay={index * 60}>
-              <article className="tl-item">
-                <div className="tl-period">{item.period}</div>
-                <h3 className="tl-role">{item.role}</h3>
-                <div className="tl-org">{item.org}</div>
-                <p className="tl-body">{item.body}</p>
-                <div className="tags">
-                  {item.tags.map((tag) => (
-                    <span className="tag" dir="ltr" key={tag}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+      <div className="xp">
+        {t.experience.items.map((item, index) => (
+          <XpItem
+            key={item.org}
+            period={item.period}
+            role={item.role}
+            org={item.org}
+            body={item.body}
+            tags={item.tags}
+            delay={index * 60}
+          />
+        ))}
+      </div>
 
-        <Reveal>
-          <h3 className="sub-head">{t.experience.educationTitle}</h3>
-          <article className="tl-item">
-            <div className="tl-period">{education.period}</div>
-            <h3 className="tl-role">{education.role}</h3>
-            <div className="tl-org">{education.org}</div>
-            <p className="tl-body" style={{ marginBottom: 0 }}>
-              {education.body}
-            </p>
-          </article>
-        </Reveal>
+      <h3 className="sec__h3 subh">{t.experience.educationTitle}</h3>
+
+      <div className="xp">
+        <XpItem
+          period={education.period}
+          role={education.role}
+          org={education.org}
+          body={education.body}
+        />
       </div>
     </section>
   )

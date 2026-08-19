@@ -1,19 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
-import type { ReactNode } from 'react'
 
-interface RevealProps {
-  children: ReactNode
-  delay?: number
-  className?: string
-}
-
-export function Reveal({ children, delay = 0, className = '' }: RevealProps) {
-  const ref = useRef<HTMLDivElement>(null)
+/**
+ * Reveals an element once it scrolls into view. Returns a ref instead of
+ * rendering a wrapper, because the layout leans on `:first-child` and sibling
+ * rules that an extra element would break.
+ */
+export function useReveal<T extends HTMLElement>() {
+  const ref = useRef<T>(null)
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const node = ref.current
     if (!node) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -23,18 +22,10 @@ export function Reveal({ children, delay = 0, className = '' }: RevealProps) {
       },
       { threshold: 0.12, rootMargin: '0px 0px -60px 0px' },
     )
+
     observer.observe(node)
     return () => observer.disconnect()
   }, [])
 
-  return (
-    <div
-      ref={ref}
-      className={`reveal${className ? ` ${className}` : ''}`}
-      data-visible={visible}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      {children}
-    </div>
-  )
+  return { ref, visible }
 }
