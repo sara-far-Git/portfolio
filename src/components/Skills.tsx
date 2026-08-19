@@ -40,6 +40,13 @@ export function Skills() {
         ))}
       </div>
 
+      <div className="also">
+        <span className="mono">{t.skills.alsoTitle}</span>
+        <p>
+          <bdi dir="ltr">{t.skills.also.join(' · ')}</bdi>
+        </p>
+      </div>
+
       <div className="langs">
         <span className="mono">{t.skills.languagesTitle}</span>
         {t.skills.languages.map((language) => (

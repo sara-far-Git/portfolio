@@ -17,6 +17,7 @@ function XpItem({ period, role, org, body, tags, delay = 0 }: XpItemProps) {
     <div className="xp__i rv" ref={ref} data-v={visible} style={{ transitionDelay: `${delay}ms` }}>
       <div className="xp__p">
         <bdi dir="ltr">{period}</bdi>
+        <span className="xp__rule" aria-hidden="true" />
       </div>
       <div>
         <h3 className="xp__r">{role}</h3>

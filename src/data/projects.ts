@@ -12,6 +12,10 @@ export interface Project {
   stack: string[]
   metrics: { value: string; label: Record<Lang, string> }[]
   links: { repo?: string; demo?: string; note?: Record<Lang, string> }
+  /** Poster shown inside the browser frame before the live site is loaded. */
+  shot?: string
+  /** Pipeline steps, shown instead of a browser frame when there is no live site. */
+  flow?: Record<Lang, string[]>
   accent: string
 }
 
@@ -19,7 +23,7 @@ export const projects: Project[] = [
   {
     id: 'tripease',
     name: 'TripEase',
-    period: { he: '2026 – היום', en: '2026 – Present' },
+    period: { he: '2026–היום', en: '2026–Present' },
     featured: true,
     accent: '#5b8cff',
     tagline: {
@@ -27,8 +31,8 @@ export const projects: Project[] = [
       en: 'AI-powered collaborative trip planning platform',
     },
     summary: {
-      he: 'אפליקציית מובייל ווב לתכנון טיולים קבוצתי: צ׳אט־סוכן שבונה טיול מלא משיחה חופשית, תמחור טיסות ולינה ממקורות אמיתיים, בדיקת היתכנות תקציבית, המלצות מותאמות אישית ותכנון יומי מחדש בלחיצה. עבדתי על שכבת הלקוח (React Native / React) ועל שירותי ה-FastAPI שמאחוריה.',
-      en: 'A mobile and web product for group trip planning: an agentic chat that builds a full itinerary from free-form conversation, real-fare flight and lodging pricing, budget feasibility checks, personalized recommendations, and one-tap day replanning. I work on the client layer (React Native / React) and the FastAPI services behind it.',
+      he: 'פיתוח Web ו-Mobile לפלטפורמת תכנון טיולים מבוססת AI. מפתחת פיצ׳רים ב-React וב-React Native, מחברת את שכבת הלקוח לשירותי FastAPI ולמקורות מידע חיצוניים, ועובדת על זרימות של תכנון מסלול, המלצות מותאמות אישית, תקציב ונתוני טיסות ולינה אמיתיים.',
+      en: 'Web and mobile development for an AI-powered trip planning platform. I build features in React and React Native, wire the client layer to FastAPI services and external data sources, and work on the flows for itinerary planning, personalized recommendations, budget and real flight and lodging data.',
     },
     role: {
       he: 'Full Stack / React Developer',
@@ -50,10 +54,11 @@ export const projects: Project[] = [
     },
     stack: ['React Native', 'React', 'TypeScript', 'Zustand', 'Redux', 'FastAPI', 'PostgreSQL', 'pgvector', 'OpenAI', 'Docker', 'Render'],
     metrics: [
-      { value: '670', label: { he: 'קומיטים בריפו', en: 'commits in repo' } },
       { value: '138', label: { he: 'Pull Requests שמוזגו', en: 'merged pull requests' } },
       { value: '128', label: { he: 'קבצי בדיקות', en: 'test files' } },
+      { value: '2', label: { he: 'פלטפורמות — Web ו-Mobile', en: 'platforms — web and mobile' } },
     ],
+    shot: '/shots/tripease.jpg',
     links: {
       demo: 'https://planitplane.com',
       note: {
@@ -96,7 +101,7 @@ export const projects: Project[] = [
     },
     stack: ['React', 'Vite', 'three.js', 'pdf.js', '.NET 8', 'C#', 'PostgreSQL', 'AWS S3', 'AWS RDS', 'Python', 'Flask', 'OpenAI', 'Docker', 'Cloudflare'],
     metrics: [
-      { value: '158', label: { he: 'קומיטים', en: 'commits' } },
+      { value: '3', label: { he: 'ממשקים — קוראים · מפרסמים · ניהול', en: 'interfaces — reader · advertiser · admin' } },
       { value: '54', label: { he: 'קומפוננטות React', en: 'React components' } },
       { value: '13', label: { he: 'API Controllers', en: 'API controllers' } },
     ],
@@ -140,8 +145,9 @@ export const projects: Project[] = [
     metrics: [
       { value: '3', label: { he: 'פלטפורמות במונוריפו', en: 'platforms in one monorepo' } },
       { value: '11', label: { he: 'קבוצות endpoints', en: 'endpoint groups' } },
-      { value: '60', label: { he: 'קומיטים', en: 'commits' } },
+      { value: 'GPT-4o', label: { he: 'סריקת מתכון מתמונה', en: 'recipe scanning from a photo' } },
     ],
+    shot: '/shots/recipeapp.jpg',
     links: {
       repo: 'https://github.com/sara-far-Git/recipeapp',
       demo: 'https://recipeapp-kohl.vercel.app/',
@@ -153,8 +159,8 @@ export const projects: Project[] = [
     period: { he: '2026', en: '2026' },
     accent: '#a76bf0',
     tagline: {
-      he: 'חיפוש סמנטי בתוך וידאו באמצעות זיהוי אובייקטים',
-      en: 'Semantic search inside video via object detection',
+      he: 'חיפוש חופשי בתוך וידאו באמצעות זיהוי אובייקטים',
+      en: 'Free-form search inside video via object detection',
     },
     summary: {
       he: 'מערכת שמעלה קטעי וידאו, מנתחת אותם עם YOLOv8 לזיהוי אובייקטים פר-פריים, ומאפשרת חיפוש חופשי בעברית על מה שמופיע בסרטון — כולל סיכומים אוטומטיים מבוססי OpenAI. הניתוח רץ ברקע כדי שההעלאה לא תיחסם.',
@@ -184,6 +190,22 @@ export const projects: Project[] = [
       { value: 'Async', label: { he: 'עיבוד ברקע', en: 'background processing' } },
       { value: 'HE↔EN', label: { he: 'חיפוש חוצה־שפות', en: 'cross-language search' } },
     ],
+    flow: {
+      he: [
+        'העלאת וידאו',
+        'חילוץ פריימים — OpenCV',
+        'זיהוי אובייקטים — YOLOv8',
+        'שמירת תוצאות — SQLite',
+        'חיפוש חופשי בעברית',
+      ],
+      en: [
+        'Video upload',
+        'Frame extraction — OpenCV',
+        'Object detection — YOLOv8',
+        'Results persisted — SQLite',
+        'Free-form search in Hebrew',
+      ],
+    },
     links: {
       repo: 'https://github.com/sara-far-Git/video-search-ai',
     },

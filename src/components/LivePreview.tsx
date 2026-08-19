@@ -7,9 +7,10 @@ const LOAD_TIMEOUT = 7000
 interface LivePreviewProps {
   url: string
   name: string
+  shot?: string
 }
 
-export function LivePreview({ url, name }: LivePreviewProps) {
+export function LivePreview({ url, name, shot }: LivePreviewProps) {
   const { t } = useLanguage()
   const viewport = useRef<HTMLDivElement>(null)
   const [scale, setScale] = useState(0)
@@ -47,10 +48,16 @@ export function LivePreview({ url, name }: LivePreviewProps) {
       </div>
 
       <div className="live__vp" ref={viewport}>
-        <div className="live__ph">
-          <b>{name}</b>
-          <span className="mono">{t.live.hint}</span>
-        </div>
+        {shot ? (
+          <div className="live__ph live__ph--shot">
+            <img src={shot} alt={name} loading="lazy" />
+          </div>
+        ) : (
+          <div className="live__ph">
+            <b>{name}</b>
+            <span className="mono">{t.live.hint}</span>
+          </div>
+        )}
 
         {state !== 'idle' && (
           <iframe

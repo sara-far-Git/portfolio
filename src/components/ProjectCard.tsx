@@ -10,6 +10,8 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
   const [open, setOpen] = useState(false)
 
   const demo = project.links.demo
+  const flow = project.flow?.[lang]
+  const hasMedia = Boolean(demo || flow)
 
   return (
     <article
@@ -25,7 +27,7 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
         <span className="ent__role">{project.role[lang]}</span>
       </div>
 
-      <div className={`ent__cols${demo ? '' : ' ent__cols--solo'}`}>
+      <div className={`ent__cols${hasMedia ? '' : ' ent__cols--solo'}`}>
         <div>
           <h3 className="ent__name">{project.name}</h3>
           <p className="ent__tag">{project.tagline[lang]}</p>
@@ -83,10 +85,28 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
           </div>
         </div>
 
-        {demo && (
+        {demo ? (
           <div className="ent__media">
-            <LivePreview url={demo} name={project.name} />
+            <LivePreview url={demo} name={project.name} shot={project.shot} />
           </div>
+        ) : (
+          flow && (
+            <div className="ent__media">
+              <div className="flow">
+                <div className="flow__bar">
+                  <span className="mono">pipeline</span>
+                </div>
+                <ol className="flow__steps">
+                  {flow.map((step, index) => (
+                    <li key={step}>
+                      <span className="mono">{String(index + 1).padStart(2, '0')}</span>
+                      {step}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          )
         )}
       </div>
     </article>
