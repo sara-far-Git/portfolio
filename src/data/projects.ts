@@ -187,45 +187,4 @@ export const projects: Project[] = [
       repo: 'https://github.com/sara-far-Git/video-search-ai',
     },
   },
-  {
-    id: 'li-cbt',
-    name: 'LI-CBT',
-    year: '2026',
-    accent: '#e05c7e',
-    tagline: {
-      he: 'תיק מטופל דיגיטלי למרפאת CBT',
-      en: 'A digital patient file for a CBT clinic',
-    },
-    summary: {
-      he: 'פלטפורמה קלינית לטיפול CBT: תיק מטופל דיגיטלי, לוחות משימות נפרדים למטופל ולמטפל, ומערכת הרשאות מלאה. נבנתה מאפיון מוצר מפורט אל תוך מערכת עיצוב עקבית, עם NestJS ו-Prisma בצד השרת ו-PWA ב-React בצד הלקוח.',
-      en: 'A clinical platform for CBT treatment: a digital patient file, separate task dashboards for patient and therapist, and a full permissions model. Built from a detailed product spec into a consistent design system, with NestJS and Prisma on the server and a React PWA on the client.',
-    },
-    role: {
-      he: 'פרויקט אישי — ארכיטקטורה, שרת ולקוח',
-      en: 'Personal project — architecture, server and client',
-    },
-    highlights: {
-      he: [
-        'שרת NestJS מודולרי עם Prisma מעל MySQL, ולידציות ב-class-validator ו-DTOs מוגדרים',
-        'אימות כפול: JWT מקומי ו-Google OAuth דרך Passport, עם הפרדת תפקידים מטופל/מטפל',
-        'מערכת עיצוב Frontend שנבנתה לפני המסכים — טוקנים, קומפוננטות בסיס ו-PWA מוכן להתקנה',
-        'סביבת פיתוח מוכלת ב-Docker Compose כדי שהרצה מקומית תהיה פקודה אחת',
-      ],
-      en: [
-        'A modular NestJS server with Prisma over MySQL, class-validator validation and explicit DTOs',
-        'Two auth paths: local JWT and Google OAuth via Passport, with patient/therapist role separation',
-        'A frontend design system built before the screens — tokens, base components and an installable PWA',
-        'A containerized dev environment via Docker Compose so local setup is a single command',
-      ],
-    },
-    stack: ['NestJS', 'Prisma', 'MySQL', 'React', 'Vite', 'Tailwind CSS', 'PWA', 'Passport', 'JWT', 'Docker'],
-    metrics: [
-      { value: '2', label: { he: 'ממשקים נפרדים', en: 'distinct user surfaces' } },
-      { value: 'PWA', label: { he: 'ניתן להתקנה', en: 'installable' } },
-      { value: 'OAuth', label: { he: 'התחברות Google', en: 'Google sign-in' } },
-    ],
-    links: {
-      repo: 'https://github.com/sara-far-Git/CBT-project',
-    },
-  },
 ]
