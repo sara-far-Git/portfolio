@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sara-farkash-portfolio",
+  "compatibility_date": "2026-08-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}
