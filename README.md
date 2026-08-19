@@ -21,14 +21,26 @@ npm run preview    # תצוגה מקומית של ה-build
 
 ## פריסה
 
-### Cloudflare Pages / Workers
+### אוטומטי — כל פוש ל-main
+
+`.github/workflows/deploy.yml` בונה ופורס ל-Cloudflare בכל פוש לענף `main`
+(וגם ידנית מלשונית Actions בגיטהאב).
+
+דורש שני secrets בריפו — `Settings → Secrets and variables → Actions`:
+
+| Secret | ערך |
+|--------|-----|
+| `CLOUDFLARE_API_TOKEN` | טוקן מ-Cloudflare עם הרשאת `Edit Cloudflare Workers` |
+| `CLOUDFLARE_ACCOUNT_ID` | מזהה החשבון, מהעמוד הראשי של Workers & Pages |
+
+### ידני
 
 ```bash
+npm run build
 npx wrangler deploy
 ```
 
-`wrangler.jsonc` מגיש את `dist/` כאתר סטטי. אפשר גם לחבר את הריפו ישירות ל-Cloudflare Pages:
-פקודת build — `npm run build`, תיקיית פלט — `dist`.
+`wrangler.jsonc` מגיש את `dist/` כאתר סטטי.
 
 ### GitHub Pages
 
