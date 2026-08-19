@@ -11,7 +11,7 @@ export const content = {
     },
     hero: {
       kicker: 'Full Stack Developer',
-      name: 'שרי פרקש',
+      name: 'שרה פרקש',
       headline: 'בונה מוצרים שלמים — מהמסך הראשון ועד ה-deploy.',
       intro:
         'מפתחת Full Stack עם ניסיון בבניית אפליקציות ווב ומובייל מקצה לקצה ב-React, React Native, Node.js, FastAPI ו-PostgreSQL. מתמחה באינטגרציית API, פיצ׳רים מבוססי AI, אוטומציה ופריסה בענן — ולוקחת בעלות על משימה מהתכנון ועד ה-production.',
