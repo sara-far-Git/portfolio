@@ -55,6 +55,7 @@ export const projects: Project[] = [
       { value: '128', label: { he: 'קבצי בדיקות', en: 'test files' } },
     ],
     links: {
+      demo: 'https://planitplane.com',
       note: {
         he: 'ריפו פרטי של החברה — אשמח להציג את הקוד בשיחה',
         en: 'Private company repository — happy to walk through the code in a conversation',
