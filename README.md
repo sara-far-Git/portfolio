@@ -69,6 +69,6 @@ src/
 ## עדכון תוכן
 
 - **פרויקט חדש** — הוספת אובייקט ל-`src/data/projects.ts`. `featured: true` משייך אותו לסקציית העבודה המקצועית.
-- **טקסטים, ניסיון, כלים, פרטי קשר** — `src/data/content.ts`. `skills.groups` הוא ה-Core Stack שמוצג בגדול, ו-`skills.also` הרשימה המשנית שמתחתיו.
+- **טקסטים, ניסיון, כלים, פרטי קשר** — `src/data/content.ts`. `skills.core` הוא ה-Core Stack שמוצג בגדול, ו-`skills.also` הרשימה Additional / Testing & Tools שמתחתיו.
 - **צילום מסך של פרויקט** — קובץ ב-`public/shots/`, והפניה אליו בשדה `shot` של הפרויקט.
 - **קורות חיים** — החלפת `public/Sara_Farkash_CV.pdf`.

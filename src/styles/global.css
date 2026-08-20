@@ -244,14 +244,15 @@ html[dir='ltr'] .hdr nav a::after {
 }
 
 .hero__keep {
+  display: inline-block;
   white-space: nowrap;
   unicode-bidi: isolate;
 }
 
 .hero__intro {
-  max-width: 60ch;
-  color: #4a443c;
-  font-size: 1.2rem;
+  max-width: 62ch;
+  color: #3d3830;
+  font-size: 1.25rem;
   line-height: 1.75;
 }
 
@@ -869,22 +870,11 @@ html[lang='he'] .ent__role {
 
 /* ---------- skills ---------- */
 
-.sk {
-  display: grid;
-  gap: 0;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.core {
+  padding-top: 0.4rem;
 }
 
-.sk > div {
-  padding: 1.7rem 1.6rem 1.7rem 0;
-  border-top: 1px solid var(--line2);
-}
-
-html[dir='ltr'] .sk > div {
-  padding: 1.7rem 0 1.7rem 1.6rem;
-}
-
-.sk h3 {
+.core h3 {
   font-family: var(--sans);
   font-size: 0.78rem;
   letter-spacing: 0.15em;
@@ -892,6 +882,14 @@ html[dir='ltr'] .sk > div {
   color: var(--ink);
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+.tags--core .tag {
+  font-size: 0.92rem;
+  padding: 0.35rem 0.8rem;
+  color: var(--ink);
+  border-color: var(--ink);
+  background: none;
 }
 
 /* secondary tools: present but deliberately quieter than the core stack */

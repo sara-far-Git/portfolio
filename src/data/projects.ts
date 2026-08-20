@@ -31,8 +31,8 @@ export const projects: Project[] = [
       en: 'AI-powered collaborative trip planning platform',
     },
     summary: {
-      he: 'פיתוח Web ו-Mobile לפלטפורמת תכנון טיולים מבוססת AI. מפתחת פיצ׳רים ב-React וב-React Native, מחברת את שכבת הלקוח לשירותי FastAPI ולמקורות מידע חיצוניים, ועובדת על זרימות של תכנון מסלול, המלצות מותאמות אישית, תקציב ונתוני טיסות ולינה אמיתיים.',
-      en: 'Web and mobile development for an AI-powered trip planning platform. I build features in React and React Native, wire the client layer to FastAPI services and external data sources, and work on the flows for itinerary planning, personalized recommendations, budget and real flight and lodging data.',
+      he: 'פיתוח Web ו-Mobile לפלטפורמת תכנון טיולים מבוססת AI. פיתחתי פיצ׳רים ב-React וב-React Native, חיברתי את שכבת הלקוח לשירותי FastAPI ולמקורות מידע חיצוניים, ועבדתי על זרימות של תכנון מסלול, המלצות מותאמות אישית, תקציב ונתוני טיסות ולינה אמיתיים.',
+      en: 'Web and mobile development for an AI-powered trip planning platform. I built features in React and React Native, wired the client layer to FastAPI services and external data sources, and worked on the flows for itinerary planning, personalized recommendations, budget and real flight and lodging data.',
     },
     role: {
       he: 'Full Stack / React Developer',
@@ -40,14 +40,14 @@ export const projects: Project[] = [
     },
     highlights: {
       he: [
-        'מסכי משתמש מקצה לקצה: פרופיל, טיולים, העדפות, הזמנות ומסמכים — בחיבור מלא ל-REST API',
-        'ניהול state בצד הלקוח עם Zustand ו-Redux, כולל טפסים, ולידציות, טיפול בשגיאות ו-UI רספונסיבי',
-        'תרומה לפיצ׳רים מבוססי AI: מנוע המלצות, בניית מסלול יומי ותמחור תקציב מנתוני ספקים אמיתיים',
-        'עבודה בתהליך PR מסודר מול ריפו פעיל — סקירות קוד אוטומטיות, בדיקות ופריסה מתמשכת ל-Render',
+        'פיתחתי מסכי משתמש מקצה לקצה: פרופיל, טיולים, העדפות, הזמנות ומסמכים — בחיבור מלא ל-REST API',
+        'חיברתי state בצד הלקוח עם Zustand ו-Redux, כולל טפסים, ולידציות, טיפול בשגיאות ו-UI רספונסיבי',
+        'תרמתי לפיצ׳רים מבוססי AI: מנוע המלצות, בניית מסלול יומי ותמחור תקציב מנתוני ספקים אמיתיים',
+        'עבדתי בתהליך PR מסודר מול ריפו פעיל — סקירות קוד אוטומטיות, בדיקות ופריסה מתמשכת ל-Render',
       ],
       en: [
-        'End-to-end user screens — profile, trips, preferences, bookings and documents — wired to REST APIs',
-        'Client-side state with Zustand and Redux: forms, validation, error handling and responsive UI flows',
+        'Built end-to-end user screens — profile, trips, preferences, bookings and documents — wired to REST APIs',
+        'Wired client-side state with Zustand and Redux: forms, validation, error handling and responsive UI flows',
         'Contributed to AI features: the recommendation engine, itinerary planning and budget pricing from real supplier data',
         'Worked in a disciplined PR flow on an active repo — automated review, tests and continuous deploys to Render',
       ],
@@ -78,8 +78,8 @@ export const projects: Project[] = [
       en: 'Community newspaper platform with a self-service advertiser system and AI',
     },
     summary: {
-      he: 'מערכת מלאה לעיתון קהילתי בעברית: קריאת גיליונות בחוויית "ספר מתהפך" תלת-ממדי מעל PDF, מערכת Self-Service למפרסמים להזמנת מקומות פרסום, העלאת קריאייטיב ומעקב ביצועים, פאנל ניהול, ושכבת אנליטיקה עם צ׳אטבוטים מבוססי OpenAI. בניתי את כל השכבות — Frontend, .NET API ומיקרו-שירותי Python.',
-      en: 'A full platform for a Hebrew community newspaper: a 3D flipbook reading experience rendered over PDFs, a self-service advertiser system for booking ad slots, uploading creatives and tracking performance, an admin panel, and an analytics layer with OpenAI-powered chatbots. I built every layer — frontend, the .NET API and the Python microservices.',
+      he: 'בניתי את כל השכבות של עיתון קהילתי בעברית — Frontend, .NET API ומיקרו-שירותי Python. פיתחתי קורא גיליונות תלת-ממדי מעל PDF, מערכת Self-Service למפרסמים, פאנל ניהול, ושכבת אנליטיקה עם צ׳אטבוטים מבוססי OpenAI.',
+      en: 'I built every layer of a Hebrew community newspaper — frontend, a .NET API and Python microservices. I developed a 3D flipbook reader over PDFs, a self-service advertiser system, an admin panel, and an analytics layer with OpenAI-powered chatbots.',
     },
     role: {
       he: 'Freelance Full Stack Developer',
@@ -87,15 +87,15 @@ export const projects: Project[] = [
     },
     highlights: {
       he: [
-        'קורא גיליונות תלת-ממדי מעל pdf.js ו-three.js, עם תמיכת מגע מלאה ו-RTL',
-        'API ב-.NET 8 מול PostgreSQL ב-AWS RDS ואחסון קבצים ב-S3, עם התחברות Google OAuth',
-        'מיקרו-שירותי Python (Flask + OpenAI) לצ׳אטבוט מפרסמים ולניתוח נתונים, ארוזים באותו Docker image',
-        'פריסה ב-Cloudflare Pages + Render, כולל Functions כ-reverse proxy לפתרון CORS ועקיפת timeout',
+        'פיתחתי קורא גיליונות תלת-ממדי מעל pdf.js ו-three.js, עם תמיכת מגע מלאה ו-RTL',
+        'בניתי API ב-.NET 8 מול PostgreSQL ב-AWS RDS ואחסון קבצים ב-S3, עם התחברות Google OAuth',
+        'כתבתי מיקרו-שירותי Python (Flask + OpenAI) לצ׳אטבוט מפרסמים ולניתוח נתונים, באותו Docker image',
+        'פרסתי ל-Cloudflare Pages + Render, כולל Functions כ-reverse proxy לפתרון CORS ועקיפת timeout',
       ],
       en: [
-        'A 3D issue reader built on pdf.js and three.js, with full touch support and RTL layout',
-        'A .NET 8 API over PostgreSQL on AWS RDS with S3 file storage and Google OAuth sign-in',
-        'Python microservices (Flask + OpenAI) for the advertiser chatbot and analytics, shipped in the same Docker image',
+        'Built a 3D issue reader on pdf.js and three.js, with full touch support and RTL layout',
+        'Wrote a .NET 8 API over PostgreSQL on AWS RDS with S3 file storage and Google OAuth sign-in',
+        'Shipped Python microservices (Flask + OpenAI) for the advertiser chatbot and analytics, in the same Docker image',
         'Deployed to Cloudflare Pages + Render, with Pages Functions as a reverse proxy to solve CORS and gateway timeouts',
       ],
     },
@@ -121,8 +121,8 @@ export const projects: Project[] = [
       en: 'A social recipe network — web, mobile and API in one monorepo',
     },
     summary: {
-      he: 'רשת חברתית מלאה למתכונים בעברית: פיד אינסופי, יצירת מתכון באשף, סריקת מתכון מתמונה עם GPT-4o Vision, מצב בישול עם Wake Lock, מחשבון כמויות לפי מספר סועדים, לייקים, שמירות, תגובות ומערכת עוקבים. מונוריפו אחד שמשרת אתר Next.js, אפליקציית React Native ו-API ב-FastAPI.',
-      en: 'A complete social network for recipes in Hebrew: an infinite feed, a step-by-step recipe wizard, photo-to-recipe scanning with GPT-4o Vision, a cooking mode with Wake Lock, a serving-size calculator, likes, saves, comments and a follow system. One monorepo serving a Next.js site, a React Native app and a FastAPI backend.',
+      he: 'תכננתי, פיתחתי ופרסתי רשת חברתית למתכונים במונוריפו אחד: אתר Next.js, אפליקציית React Native ו-API ב-FastAPI. בניתי פיד אינסופי, אשף יצירת מתכון, סריקת מתכון מתמונה עם GPT-4o Vision, מצב בישול עם Wake Lock, ומערכת לייקים, שמירות, תגובות ועוקבים.',
+      en: 'I designed, built and deployed a social recipe network as one monorepo: a Next.js site, a React Native app and a FastAPI backend. I built an infinite feed, a recipe wizard, photo-to-recipe scanning with GPT-4o Vision, a cooking mode with Wake Lock, and likes, saves, comments and follows.',
     },
     role: {
       he: 'פרויקט אישי — תכנון, פיתוח ופריסה מלאים',
@@ -130,16 +130,16 @@ export const projects: Project[] = [
     },
     highlights: {
       he: [
-        'שלוש פלטפורמות מאותו API: Next.js 14 App Router (RTL), React Native עם Expo Router, ו-FastAPI',
-        '"השף הדיגיטלי" — סריקת מתכון מצילום באמצעות GPT-4o Vision והמרתו למבנה נתונים מלא',
-        'אופטימיזציית ביצועים: חיסול שאילתות N+1, אינדקסים במסד הנתונים ושכבת cache ל-GET בצד הלקוח',
-        'אימות JWT, אחסון תמונות ב-S3/Cloudinary ומיגרציות מסד נתונים מסודרות עם Alembic',
+        'בניתי שלוש פלטפורמות מאותו API: Next.js 14 App Router (RTL), React Native עם Expo Router, ו-FastAPI',
+        'פיתחתי את "השף הדיגיטלי" — סריקת מתכון מצילום עם GPT-4o Vision והמרתו למבנה נתונים מלא',
+        'שיפרתי ביצועים: חיסול שאילתות N+1, אינדקסים במסד הנתונים ושכבת cache ל-GET בצד הלקוח',
+        'חיברתי אימות JWT, אחסון תמונות ב-S3/Cloudinary ומיגרציות מסד נתונים עם Alembic',
       ],
       en: [
-        'Three surfaces off one API: Next.js 14 App Router (RTL), React Native with Expo Router, and FastAPI',
-        'A "digital chef" that scans a photographed recipe with GPT-4o Vision and turns it into structured data',
-        'Performance work: eliminated N+1 queries, added database indexes and a client-side GET cache',
-        'JWT auth, image storage on S3/Cloudinary and versioned database migrations with Alembic',
+        'Built three surfaces off one API: Next.js 14 App Router (RTL), React Native with Expo Router, and FastAPI',
+        'Built a "digital chef" that scans a photographed recipe with GPT-4o Vision and turns it into structured data',
+        'Improved performance: eliminated N+1 queries, added database indexes and a client-side GET cache',
+        'Wired JWT auth, image storage on S3/Cloudinary and versioned database migrations with Alembic',
       ],
     },
     stack: ['Next.js 14', 'React Native', 'Expo', 'FastAPI', 'PostgreSQL 16', 'Alembic', 'Zustand', 'JWT', 'GPT-4o Vision', 'AWS S3', 'Docker'],
@@ -164,8 +164,8 @@ export const projects: Project[] = [
       en: 'Free-form search inside video via object detection',
     },
     summary: {
-      he: 'מערכת שמעלה קטעי וידאו, מנתחת אותם עם YOLOv8 לזיהוי אובייקטים פר-פריים, ומאפשרת חיפוש חופשי בעברית על מה שמופיע בסרטון — כולל סיכומים אוטומטיים מבוססי OpenAI. הניתוח רץ ברקע כדי שההעלאה לא תיחסם.',
-      en: 'A system that ingests video clips, analyzes them frame-by-frame with YOLOv8 for object detection, and lets you search in free-form Hebrew for what actually appears on screen — with automatic OpenAI-generated summaries. Analysis runs in the background so uploads never block.',
+      he: 'בניתי pipeline מלא מהעלאת וידאו ועד חיפוש: חילוץ פריימים ב-OpenCV, זיהוי אובייקטים עם YOLOv8, וחיפוש חופשי בעברית על מה שמופיע בסרטון — כולל סיכומים מ-OpenAI. הניתוח רץ ברקע כדי שההעלאה לא תיחסם.',
+      en: 'I built a full pipeline from video upload to search: frame extraction with OpenCV, object detection with YOLOv8, and free-form Hebrew search over what actually appears on screen — plus OpenAI-generated summaries. Analysis runs in the background so uploads never block.',
     },
     role: {
       he: 'פרויקט אישי — pipeline מלא מהעלאה ועד חיפוש',
@@ -173,16 +173,16 @@ export const projects: Project[] = [
     },
     highlights: {
       he: [
-        'Pipeline של ראייה ממוחשבת: OpenCV לחילוץ פריימים + YOLOv8 (ultralytics) לזיהוי אובייקטים',
-        'חיפוש בעברית מעל תוצאות באנגלית באמצעות שכבת תרגום, עם fallback שמונע קריסה כשהשירות לא זמין',
-        'ניתוח א-סינכרוני עם FastAPI BackgroundTasks — ההעלאה חוזרת מיד עם דגל processing',
-        'אימות משתמשים עם Firebase Admin, נגן וידאו מובנה ואחסון תוצאות ב-SQLite',
+        'פיתחתי pipeline של ראייה ממוחשבת: OpenCV לחילוץ פריימים ו-YOLOv8 לזיהוי אובייקטים',
+        'חיברתי חיפוש בעברית מעל תוצאות באנגלית דרך שכבת תרגום, עם fallback כשהשירות לא זמין',
+        'הפעלתי ניתוח א-סינכרוני עם FastAPI BackgroundTasks — ההעלאה חוזרת מיד עם דגל processing',
+        'חיברתי אימות Firebase Admin, נגן וידאו מובנה ואחסון תוצאות ב-SQLite',
       ],
       en: [
-        'A computer-vision pipeline: OpenCV for frame extraction plus YOLOv8 (ultralytics) for object detection',
-        'Hebrew search over English detections through a translation layer, with a fallback that keeps search alive when the service is down',
-        'Asynchronous analysis via FastAPI BackgroundTasks — uploads return immediately with a processing flag',
-        'Firebase Admin authentication, a built-in video player and results persisted to SQLite',
+        'Built a computer-vision pipeline: OpenCV for frame extraction and YOLOv8 for object detection',
+        'Wired Hebrew search over English detections through a translation layer, with a fallback when the service is down',
+        'Ran analysis asynchronously via FastAPI BackgroundTasks — uploads return immediately with a processing flag',
+        'Connected Firebase Admin authentication, a built-in video player and results persisted to SQLite',
       ],
     },
     stack: ['Python', 'FastAPI', 'YOLOv8', 'OpenCV', 'OpenAI', 'Firebase Auth', 'SQLite', 'React'],
