@@ -14,14 +14,8 @@ function initialLang(): Lang {
   return navigator.language?.startsWith('he') ? 'he' : 'en'
 }
 
-export function LanguageProvider({
-  children,
-  ssrLang,
-}: {
-  children: ReactNode
-  ssrLang?: Lang
-}) {
-  const [lang, setLang] = useState<Lang>(ssrLang ?? initialLang)
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [lang, setLang] = useState<Lang>(initialLang)
   const dir = lang === 'he' ? 'rtl' : 'ltr'
 
   useEffect(() => {

@@ -470,21 +470,18 @@ section {
 }
 
 .det {
-  margin-top: 1.7rem;
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.45s var(--ease);
 }
 
-.det summary {
-  list-style: none;
-  cursor: pointer;
-  width: fit-content;
+.det[data-open='true'] {
+  grid-template-rows: 1fr;
 }
 
-.det summary::-webkit-details-marker {
-  display: none;
-}
-
-.det[open] .chev {
-  transform: rotate(180deg);
+.det > div {
+  min-height: 0;
 }
 
 .hl {
@@ -492,7 +489,7 @@ section {
   gap: 0.65rem;
   padding-top: 1.8rem;
   border-top: 1px solid var(--line2);
-  margin-top: 1.2rem;
+  margin-top: 1.8rem;
 }
 
 .hl li {
@@ -574,6 +571,10 @@ section {
   display: inline-block;
   font-size: 1.1em;
   line-height: 1;
+}
+
+.chev[data-open='true'] {
+  transform: rotate(180deg);
 }
 
 .pnote {
@@ -668,6 +669,28 @@ section {
   display: block;
 }
 
+.live__vp iframe {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 1280px;
+  height: 800px;
+  border: 0;
+  z-index: 2;
+  transform-origin: var(--org, top right);
+  background: #fff;
+  opacity: 0;
+  transition: opacity 0.5s var(--ease);
+}
+
+html[dir='ltr'] .live__vp iframe {
+  --org: top left;
+}
+
+.live[data-state='ready'] .live__vp iframe {
+  opacity: 1;
+}
+
 .live__ft {
   display: flex;
   align-items: center;
@@ -678,6 +701,7 @@ section {
   background: var(--paper);
 }
 
+.live__btn,
 .live__go {
   font-family: var(--mono);
   font-size: 11px;
@@ -689,11 +713,13 @@ section {
   transition: 0.2s var(--ease);
 }
 
+.live__btn:hover,
 .live__go:hover {
   color: var(--accent);
   border-color: var(--accent);
 }
 
+html[lang='he'] .live__btn,
 html[lang='he'] .live__hint,
 html[lang='he'] .ent__role {
   letter-spacing: 0.02em;
@@ -705,6 +731,23 @@ html[lang='he'] .ent__role {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--faint);
+}
+
+.live__fb {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: none;
+  place-content: center;
+  gap: 0.7rem;
+  justify-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: var(--paper2);
+}
+
+.live[data-blocked='true'] .live__fb {
+  display: grid;
 }
 
 /* ---------- pipeline panel, for projects without a live site ---------- */
@@ -961,11 +1004,6 @@ html[dir='ltr'] .ct__l a:first-child {
 /* ---------- reveal on scroll ---------- */
 
 .rv {
-  opacity: 1;
-  transform: none;
-}
-
-html.js .rv {
   opacity: 0;
   transform: translateY(16px);
   transition:
@@ -973,7 +1011,7 @@ html.js .rv {
     transform 0.7s var(--ease);
 }
 
-html.js .rv[data-v='true'] {
+.rv[data-v='true'] {
   opacity: 1;
   transform: none;
 }

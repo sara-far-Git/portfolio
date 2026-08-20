@@ -4,8 +4,6 @@ import App from './App.tsx'
 import { LanguageProvider } from './i18n/LanguageProvider'
 import './styles/global.css'
 
-document.documentElement.classList.add('js')
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <LanguageProvider>

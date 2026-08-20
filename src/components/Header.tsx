@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useLanguage } from '../i18n/useLanguage'
 
 export function Header() {
-  const { lang, t, toggle } = useLanguage()
+  const { t, toggle } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -27,15 +27,9 @@ export function Header() {
           <a href="#contact">{t.nav.contact}</a>
         </nav>
 
-        {import.meta.env.PROD ? (
-          <a className="lang" href={lang === 'he' ? '/en.html' : '/'}>
-            {t.langToggle}
-          </a>
-        ) : (
-          <button className="lang" onClick={toggle} aria-label="Switch language">
-            {t.langToggle}
-          </button>
-        )}
+        <button className="lang" onClick={toggle} aria-label="Switch language">
+          {t.langToggle}
+        </button>
       </div>
     </header>
   )
