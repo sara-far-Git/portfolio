@@ -7,7 +7,8 @@ import { useEffect, useRef, useState } from 'react'
  */
 export function useReveal<T extends HTMLElement>() {
   const ref = useRef<T>(null)
-  const [visible, setVisible] = useState(false)
+  // Prerendered markup has no observer to reveal it, so it ships visible.
+  const [visible, setVisible] = useState(() => typeof window === 'undefined')
 
   useEffect(() => {
     const node = ref.current
