@@ -16,7 +16,10 @@ export function Hero() {
 
       <p className="hero__head">
         {t.hero.headline}
-        <em>{t.hero.headlineAccent}</em>
+        <em>
+          {t.hero.headlineAccent}
+          <span className="hero__keep">{t.hero.headlineKeep}</span>
+        </em>
       </p>
 
       <p className="hero__intro">{t.hero.intro}</p>

@@ -13,10 +13,11 @@ export const content = {
       kicker: 'Full Stack Developer',
       name: 'שרה פרקש',
       headline: 'בונה מוצרים שלמים — ',
-      headlineAccent: 'מהמסך הראשון ועד ה-deploy.',
+      headlineAccent: 'מהמסך הראשון ',
+      headlineKeep: 'ועד ה-deploy',
       intro:
         'מפתחת Full Stack עם ניסיון בבניית אפליקציות Web ו-Mobile מקצה לקצה ב-React, React Native, Node.js, FastAPI ו-PostgreSQL. עובדת עם אינטגרציות API, פיצ׳רים מבוססי AI, אוטומציה ופריסה בענן — ויודעת לקחת פיצ׳ר מהאפיון ועד production.',
-      ctaWork: 'לעבודות',
+      ctaWork: 'לפרויקטים',
       ctaMail: 'שליחת מייל',
       ctaCv: 'הורדת קורות חיים',
       stats: [
@@ -106,10 +107,11 @@ export const content = {
       kicker: 'Full Stack Developer',
       name: 'Sara Farkash',
       headline: 'I build whole products — ',
-      headlineAccent: 'from the first screen to the deploy.',
+      headlineAccent: 'from the first screen ',
+      headlineKeep: 'to the deploy',
       intro:
         'Full Stack Developer with experience building end-to-end web and mobile applications in React, React Native, Node.js, FastAPI and PostgreSQL. I work with API integrations, AI-powered features, automation and cloud deployment — and I can take a feature from spec all the way to production.',
-      ctaWork: 'See the work',
+      ctaWork: 'See the projects',
       ctaMail: 'Email me',
       ctaCv: 'Download CV',
       stats: [
