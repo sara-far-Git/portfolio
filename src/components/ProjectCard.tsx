@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import type { Project } from '../data/projects'
 import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../i18n/useLanguage'
@@ -7,7 +6,6 @@ import { LivePreview } from './LivePreview'
 export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: number }) {
   const { lang, t } = useLanguage()
   const { ref, visible } = useReveal<HTMLElement>()
-  const [open, setOpen] = useState(false)
 
   const demo = project.links.demo
   const flow = project.flow?.[lang]
@@ -44,33 +42,29 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
             ))}
           </div>
 
-          <div className="det" data-open={open}>
-            <div>
-              <ul className="hl">
-                {project.highlights[lang].map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-
-              <p className="mono stackl">{t.work.stackLabel}</p>
-              <div className="tags">
-                {project.stack.map((tech) => (
-                  <span className="tag" key={tech}>
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="plinks">
-            <button className="more" onClick={() => setOpen((prev) => !prev)} aria-expanded={open}>
-              {open ? t.work.readLess : t.work.readMore}
-              <span className="chev" data-open={open} aria-hidden="true">
+          <details className="det" open>
+            <summary className="more">
+              {t.work.readMore}
+              <span className="chev" aria-hidden="true">
                 ⌄
               </span>
-            </button>
+            </summary>
+            <ul className="hl">
+              {project.highlights[lang].map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p className="mono stackl">{t.work.stackLabel}</p>
+            <div className="tags">
+              {project.stack.map((tech) => (
+                <span className="tag" key={tech}>
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </details>
 
+          <div className="plinks">
             {demo && (
               <a className="tl-link" href={demo} target="_blank" rel="noreferrer">
                 {t.work.viewDemo} ↗
@@ -87,7 +81,13 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
 
         {demo ? (
           <div className="ent__media">
-            <LivePreview url={demo} name={project.name} shot={project.shot} />
+            <LivePreview
+              url={demo}
+              name={project.name}
+              shot={project.shot}
+              openLabel={t.live.open}
+              hint={t.live.hint}
+            />
           </div>
         ) : (
           flow && (
