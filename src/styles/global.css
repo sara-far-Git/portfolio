@@ -834,20 +834,20 @@ html[lang='he'] .ent__role {
 }
 
 .xp__r {
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 700;
 }
 
 .xp__o {
-  color: var(--faint);
-  font-size: 0.92rem;
+  color: var(--muted);
+  font-size: 0.98rem;
   margin-bottom: 0.9rem;
 }
 
 .xp__b {
-  color: var(--muted);
+  color: #3d3830;
   max-width: 68ch;
-  font-size: 1.02rem;
+  font-size: 1.12rem;
   line-height: 1.75;
   margin-bottom: 1.1rem;
 }
@@ -907,8 +907,8 @@ html[lang='he'] .ent__role {
   flex: 1;
   min-width: 18rem;
   max-width: 78ch;
-  color: var(--faint);
-  font-size: 0.9rem;
+  color: #4a443c;
+  font-size: 1.02rem;
   line-height: 1.9;
 }
 
