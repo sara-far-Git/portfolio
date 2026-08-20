@@ -105,6 +105,7 @@ export const projects: Project[] = [
       { value: '54', label: { he: 'קומפוננטות React', en: 'React components' } },
       { value: '13', label: { he: 'API Controllers', en: 'API controllers' } },
     ],
+    shot: '/shots/hasdera.jpg',
     links: {
       repo: 'https://github.com/sara-far-Git/HasderaNewsletter-2025',
       demo: 'https://hasdera-advertiser.pages.dev',
