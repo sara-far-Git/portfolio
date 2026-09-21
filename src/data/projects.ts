@@ -14,6 +14,8 @@ export interface Project {
   links: { repo?: string; demo?: string; note?: Record<Lang, string> }
   /** Poster shown inside the browser frame before the live site is loaded. */
   shot?: string
+  /** When false, keep the poster and skip the iframe — the live site refuses to be framed. */
+  embed?: boolean
   /** Pipeline steps, shown instead of a browser frame when there is no live site. */
   flow?: Record<Lang, string[]>
   accent: string
@@ -149,6 +151,7 @@ export const projects: Project[] = [
       { value: 'GPT-4o', label: { he: 'סריקת מתכון מתמונה', en: 'recipe scanning from a photo' } },
     ],
     shot: '/shots/recipeapp.jpg',
+    embed: false,
     links: {
       repo: 'https://github.com/sara-far-Git/recipeapp',
       demo: 'https://www.recipespace.co.il',

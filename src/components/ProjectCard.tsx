@@ -87,7 +87,7 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
 
         {demo ? (
           <div className="ent__media">
-            <LivePreview url={demo} name={project.name} shot={project.shot} />
+            <LivePreview url={demo} name={project.name} shot={project.shot} embed={project.embed} />
           </div>
         ) : (
           flow && (

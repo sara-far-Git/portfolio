@@ -8,9 +8,10 @@ interface LivePreviewProps {
   url: string
   name: string
   shot?: string
+  embed?: boolean
 }
 
-export function LivePreview({ url, name, shot }: LivePreviewProps) {
+export function LivePreview({ url, name, shot, embed = true }: LivePreviewProps) {
   const { t } = useLanguage()
   const viewport = useRef<HTMLDivElement>(null)
   const [scale, setScale] = useState(0)
@@ -79,12 +80,14 @@ export function LivePreview({ url, name, shot }: LivePreviewProps) {
       </div>
 
       <div className="live__ft">
-        {state === 'idle' ? (
+        {embed && state === 'idle' ? (
           <button className="live__btn" onClick={() => setState('loading')}>
             {t.live.load}
           </button>
-        ) : (
+        ) : embed ? (
           <span className="live__hint">{state === 'ready' ? t.live.hint : t.live.loading}</span>
+        ) : (
+          <span className="live__hint">{t.live.hint}</span>
         )}
 
         <a className="live__go" href={url} target="_blank" rel="noreferrer">
