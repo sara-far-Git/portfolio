@@ -151,7 +151,7 @@ export const projects: Project[] = [
     shot: '/shots/recipeapp.jpg',
     links: {
       repo: 'https://github.com/sara-far-Git/recipeapp',
-      demo: 'https://recipeapp-kohl.vercel.app/',
+      demo: 'https://www.recipespace.co.il',
     },
   },
   {
