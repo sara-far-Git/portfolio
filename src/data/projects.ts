@@ -108,9 +108,10 @@ export const projects: Project[] = [
       { value: '13', label: { he: 'API Controllers', en: 'API controllers' } },
     ],
     shot: '/shots/hasdera.jpg',
+    embed: false,
     links: {
       repo: 'https://github.com/sara-far-Git/HasderaNewsletter-2025',
-      demo: 'https://hasdera-advertiser.pages.dev',
+      demo: 'https://hasdera-magazine.co.il',
     },
   },
   {
