@@ -108,7 +108,6 @@ export const projects: Project[] = [
       { value: '13', label: { he: 'API Controllers', en: 'API controllers' } },
     ],
     shot: '/shots/hasdera.jpg',
-    embed: false,
     links: {
       repo: 'https://github.com/sara-far-Git/HasderaNewsletter-2025',
       demo: 'https://hasdera-magazine.co.il',
@@ -152,7 +151,6 @@ export const projects: Project[] = [
       { value: 'GPT-4o', label: { he: 'סריקת מתכון מתמונה', en: 'recipe scanning from a photo' } },
     ],
     shot: '/shots/recipeapp.jpg',
-    embed: false,
     links: {
       repo: 'https://github.com/sara-far-Git/recipeapp',
       demo: 'https://www.recipespace.co.il',
