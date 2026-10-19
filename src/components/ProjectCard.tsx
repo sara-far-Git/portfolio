@@ -94,7 +94,7 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
             <div className="ent__media">
               <div className="flow">
                 <div className="flow__bar">
-                  <span className="mono">pipeline</span>
+                  <span className="mono">{t.work.flowLabel}</span>
                 </div>
                 <ol className="flow__steps">
                   {flow.map((step, index) => (

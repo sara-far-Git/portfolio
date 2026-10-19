@@ -27,7 +27,7 @@ export function Header() {
           <a href="#contact">{t.nav.contact}</a>
         </nav>
 
-        <button className="lang" onClick={toggle} aria-label="Switch language">
+        <button className="lang" onClick={toggle} aria-label={t.langToggleLabel}>
           {t.langToggle}
         </button>
       </div>
