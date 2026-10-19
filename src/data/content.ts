@@ -12,9 +12,9 @@ export const content = {
     hero: {
       kicker: 'Full Stack Developer',
       name: 'שרה פרקש',
-      headline: 'מפתחת Full Stack ',
-      headlineAccent: 'ל-Web ',
-      headlineKeep: 'ול-Mobile',
+      headline: 'מפתחת Full Stack',
+      headlineAccent: 'Frontend · Backend · ',
+      headlineKeep: 'Mobile',
       intro:
         'יש לי ניסיון בפיתוח Frontend ו-Mobile עם React ו-React Native, ובפיתוח Backend עם Node.js, FastAPI, .NET ו-PostgreSQL. העבודה שלי כוללת פיתוח APIs, אינטגרציות, יכולות AI, בדיקות ופריסה בענן. מחפשת תפקיד Full Stack, Backend או Frontend בצוות פיתוח.',
       ctaWork: 'לעבודות ולפרויקטים',
@@ -134,9 +134,9 @@ export const content = {
     hero: {
       kicker: 'Full Stack Developer',
       name: 'Sara Farkash',
-      headline: 'Full Stack Developer — ',
-      headlineAccent: 'web & mobile ',
-      headlineKeep: 'applications',
+      headline: 'Full Stack Developer',
+      headlineAccent: 'Frontend · Backend · ',
+      headlineKeep: 'Mobile',
       intro:
         'My experience spans frontend and mobile development with React and React Native, and backend development with Node.js, FastAPI, .NET and PostgreSQL. My work includes API development, integrations, AI features, testing and cloud deployment. I’m looking for a Full Stack, Backend or Frontend role on a development team.',
       ctaWork: 'View work & projects',

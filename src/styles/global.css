@@ -1,6 +1,6 @@
 /* ============================================================
    Sara Farkash — portfolio
-   Editorial layout: paper background, serif display type,
+   Editorial layout: paper background, clean bilingual typography,
    rules instead of boxes. Direction-agnostic via CSS logical
    properties, so RTL and LTR share one set of rules.
    ============================================================ */
@@ -14,8 +14,7 @@
   --line: rgba(26, 24, 19, 0.14);
   --line2: rgba(26, 24, 19, 0.07);
   --accent: #c2410c;
-  --serif: 'Frank Ruhl Libre', Georgia, serif;
-  --sans: 'Assistant', system-ui, sans-serif;
+  --sans: 'Heebo', Arial, sans-serif;
   --mono: ui-monospace, 'SF Mono', Menlo, monospace;
   --maxw: 1180px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -53,7 +52,7 @@ html[lang='en'] body {
 h1,
 h2,
 h3 {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.015em;
@@ -103,6 +102,11 @@ button {
   color: var(--faint);
 }
 
+html[lang='he'] :is(.mono, .sec__h3, .core h3, .ent__role, .live__btn, .live__go, .live__hint, .ct__l small) {
+  font-family: var(--sans);
+  letter-spacing: 0;
+}
+
 /* ---------- header ---------- */
 
 .hdr {
@@ -127,8 +131,8 @@ button {
 }
 
 .mark {
-  font-family: var(--serif);
-  font-weight: 900;
+  font-family: var(--sans);
+  font-weight: 800;
   font-size: 20px;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -223,23 +227,27 @@ html[dir='ltr'] .hdr nav a::after {
 
 .hero h1 {
   font-size: clamp(2.4rem, 5.5vw, 3.8rem);
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -0.03em;
   margin-bottom: 0.7rem;
 }
 
 .hero__head {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(1.45rem, 3.7vw, 2.6rem);
-  line-height: 1.28;
-  max-width: 30ch;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.45rem, 3.4vw, 2.35rem);
+  line-height: 1.4;
+  max-width: 38ch;
   color: var(--ink);
   margin-bottom: 1.8rem;
 }
 
 .hero__head em {
-  font-style: italic;
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.8em;
+  font-style: normal;
+  font-weight: 500;
   color: var(--accent);
 }
 
@@ -320,9 +328,9 @@ html[dir='ltr'] .stats > div:first-child {
 
 .stats b {
   display: block;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(2rem, 4.5vw, 2.9rem);
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1;
 }
@@ -355,7 +363,7 @@ section {
 
 .sec__head h2 {
   font-size: clamp(2rem, 4.6vw, 3.1rem);
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -0.03em;
 }
 
@@ -435,7 +443,7 @@ section {
 
 .ent__name {
   font-size: clamp(1.7rem, 4vw, 2.5rem);
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -0.035em;
 }
 
@@ -463,9 +471,9 @@ section {
 
 .mets b {
   display: block;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
@@ -586,7 +594,7 @@ section {
 .pnote {
   font-size: 0.85rem;
   color: var(--faint);
-  font-style: italic;
+  font-style: normal;
 }
 
 /* ---------- browser frame with the real site inside ---------- */
@@ -654,9 +662,9 @@ section {
 }
 
 .live__ph b {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(1.4rem, 3vw, 2rem);
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
@@ -934,7 +942,7 @@ html[lang='he'] .ent__role {
 
 .ct h2 {
   font-size: clamp(2.2rem, 6vw, 4.2rem);
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -0.04em;
 }
 
